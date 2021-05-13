@@ -94,8 +94,6 @@ export default Vue.extend({
   align-items: center;
   margin-bottom: 50px;
   width: 100%;
-  min-height: 100vh;
-  padding-top: 84px;
 }
 
 .title {
