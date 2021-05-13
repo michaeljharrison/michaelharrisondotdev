@@ -1,21 +1,22 @@
 @import '~ant-design-vue/dist/antd.less';
-
+@import "~/node_modules/timeline-vuejs/dist/timeline-vuejs.css";
 // My colors
 @off-white: #FEFEFE;
 @light-gray: #C4C4C4;
 @middle-gray: #828282;
 @dark-gray: #424242;
-@dark-gray: #212121;
+@darker-gray: #212121;
 @pdb-dark-blue: #1c4d6b;
 @pdb-light-blue: #00b6d3;
 @dbkoda-purple: #363951;
 @light-purple: #9B51E0;
 @dark-purple: #8B6EA6;
+@dark-red: #513640;
 
 
-@body-background: @dbkoda-purple;
+@body-background: @dark-red;
 @component-background: #fff;
-@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+@font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
   'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol';
 @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -35,10 +36,59 @@
 
 
 // Layout
-@layout-body-background: @dbkoda-purple;
-@layout-header-background: @dark-gray;
+@layout-body-background: @dark-red;
+@layout-header-background: @darker-gray;
 @layout-footer-background: @layout-body-background;
 
+
+.column {
+  margin: 0 auto;
+  display: flex;
+  flex-direction:column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 1280px;
+  span {
+    color: @off-white;
+    font-size: 16px;
+  }
+}
+
+h1 {
+  color: @off-white;
+  font-size: 54px;
+  font-weight: lighter;
+}
+h2 {
+  color: @light-gray;
+  font-size: 34px;
+  font-weight: bold;
+}
 .projectCard {
   background-color: @off-white !important;
+}
+
+.ant-layout-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: @off-white;
+  div {
+    margin-bottom: 10px;
+  }
+}
+
+
+.timeline-item {
+  background-color: @off-white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.section-year {
+  color: @off-white;
 }

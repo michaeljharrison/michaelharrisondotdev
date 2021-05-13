@@ -6,8 +6,8 @@
 
 <style lang="less" scoped>
 .projectCard {
+  min-width: 100%;
   background: white;
-  min-width: 80%;
   min-height: 300px;
   height: 45%;
   max-height: 500px;
@@ -15,7 +15,6 @@
   display: flex;
   margin-bottom: 30px;
   margin-top: 30px;
-  margin-right: 30px;
   flex-direction: column;
   justify-content: flex-start;
   padding: 10px;

@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
@@ -27,6 +27,7 @@
       "@nuxt/types",
       "@nuxtjs/axios",
       "@nuxt/content",
+      "@nuxtjs/antd",
       "@types/node"
     ]
   },

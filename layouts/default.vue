@@ -13,6 +13,7 @@
           <a-menu-item key="1"> Home </a-menu-item>
           <a-menu-item key="2"> Resume </a-menu-item>
           <a-menu-item key="3"> Projects </a-menu-item>
+          <a-menu-item key="4"> Publications </a-menu-item>
         </a-menu>
       </a-layout-header>
       <a-layout-content :style="{ padding: '0', marginTop: '80px' }">
@@ -22,14 +23,23 @@
       </a-layout-content>
       <a-layout-footer :style="{ textAlign: 'center' }">
         <div>
-          <a-button type="primary" shape="circle" icon="github" />
-          <a-button type="primary" shape="circle" icon="twitter" />
+          <a href="https://github.com/michaeljharrison" target="__none">
+            <a-button type="primary" shape="circle" icon="github" />
+          </a>
+          <a href="https://twitter.com/Code_With_MikeH" target="__none">
+            <a-button type="primary" shape="circle" icon="twitter" />
+          </a>
         </div>
         <div>© 2021 Michael Harrison</div>
       </a-layout-footer>
     </a-layout>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({})
+</script>
 
 <style lang="scss">
 html {
@@ -85,6 +95,7 @@ html {
   flex-direction: row;
   justify-content: center;
 }
+
 .menu {
   max-width: 1280px;
 }

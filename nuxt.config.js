@@ -2,6 +2,9 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'MichaelHarrison.dev',
@@ -55,7 +58,8 @@ export default {
         },
       },
     },
-    extend({ loaders: { less } }) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    extend(config, { loaders: { less } }) {
       less.javascriptEnabled = true
     },
   },
