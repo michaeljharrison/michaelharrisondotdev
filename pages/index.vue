@@ -29,23 +29,40 @@
         <h2>My Projects</h2>
       </div>
       <div class="section item">
+        <h2>ProvenDB</h2>
         <div class="container">
-          <ProjectCard project="ProvenDB Database" class="provenDB" />
+          <ProjectCard
+            project="provendb"
+            subtitle="Blockchain Enabled Database"
+            class="provenDB"
+          />
         </div>
       </div>
       <div class="section item">
         <div class="container">
-          <ProjectCard project="Compliance Vault" class="compVault" />
+          <ProjectCard
+            project="provendb"
+            subtitle="Digital Store for Compliance Documentation."
+            class="compVault"
+          />
         </div>
       </div>
       <div class="section item">
         <div class="container">
-          <ProjectCard project="dbKoda" class="dbKoda" />
+          <ProjectCard
+            project="provendb"
+            subtitle="Open Source MongoDB IDE"
+            class="dbKoda"
+          />
         </div>
       </div>
       <div class="section item">
         <div class="container">
-          <ProjectCard project="Learn2Play" class="l2p" />
+          <ProjectCard
+            project="provendb"
+            subtitle="Cross Platform Digital Manuals"
+            class="l2p"
+          />
         </div>
       </div>
       <div class="section item">
@@ -109,11 +126,11 @@ export default Vue.extend({
 
 <style>
 .container {
+  margin-top: 40px;
   width: 100%;
   margin: 0 0;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
-  flex-grow: 1;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -121,15 +138,6 @@ export default Vue.extend({
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 1280px;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  width: 100%;
 }
 
 .title {
@@ -154,9 +162,6 @@ export default Vue.extend({
   padding-top: 15px;
 }
 
-.section {
-  min-height: 100vh;
-}
 .snap {
   /* Set the minimum height of the items to be the same as the height of the scroll-snap-container.*/
   min-height: 90vh;

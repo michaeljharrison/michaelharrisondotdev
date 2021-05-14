@@ -104,8 +104,40 @@ span {
   color: @off-white;
 }
 
+.section {
+  justify-content: space-around;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  h2 {
+    color: white;
+    margin-bottom: 0px;
+    width: 100%;
+    margin-left: 4%;
+    
+  }
+
+  .content {
+    text-align: start;
+    padding-left: 10px;
+    padding-right: 10px;;
+    h3 {
+      width: 100%;
+      text-align: start;
+      margin-top: 20px;
+    }
+    span {
+      color: @dark-gray;
+      text-align: start;
+    }
+  }
+}
+
 .provenDB {
-  h1 {
+  h3{
     color: @pdb-dark-blue !important;
   }
   .stripe {
@@ -113,7 +145,7 @@ span {
   }
 }
 .compVault {
-  h1 {
+  h3 {
     color: @pdb-dark-blue !important;
   }
   .stripe {
@@ -121,7 +153,7 @@ span {
   }
 }
 .dbKoda {
-  h1 {
+  h3 {
     color: @dbkoda-purple !important;
   }
   .stripe {
@@ -129,7 +161,7 @@ span {
   }
 }
 .l2p {
-  h1 {
+  h3 {
     color: @dark-teal !important;
   }
   .stripe {
