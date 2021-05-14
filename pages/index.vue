@@ -1,44 +1,80 @@
 <template>
   <div class="column">
-    <h1 :style="{ 'margin-bottom': '60px' }">MichaelHarrison.dev</h1>
-    <div class="section snap">
-      <h2>About Me</h2>
-      <span
-        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo numquam
-        laborum cupiditate vero asperiores possimus consectetur error doloribus?
-        A quaerat ullam ipsa dignissimos quod, consequatur optio facere saepe ut
-        sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-        voluptas architecto tempore illo obcaecati sit rerum exercitationem
-        libero atque, quaerat deserunt doloremque aliquam mollitia in dolorum
-        quisquam dicta, hic dolorem.</span
+    <VueScrollSnap>
+      <div
+        class="section item"
+        :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
-    </div>
-    <div class="section snap">
-      <h2>Where I've Worked</h2>
-      <Timeline
-        :timeline-items="timelineItems"
-        :message-when-no-items="messageWhenNoItems"
-        :show-day-and-month="true"
-        order="desc"
-      />
-    </div>
-    <div class="section item">
-      <h2 :style="{ 'margin-bottom': '0px' }">Stuff I've Built</h2>
-      <div class="container">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <h1 :style="{ 'margin-bottom': '60px' }">MichaelHarrison.dev</h1>
+        <span
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+          numquam laborum cupiditate vero asperiores possimus consectetur error
+          doloribus? A quaerat ullam ipsa dignissimos quod, consequatur optio
+          facere saepe ut sequi. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Cumque voluptas architecto tempore illo obcaecati
+          sit rerum exercitationem libero atque, quaerat deserunt doloremque
+          aliquam mollitia in dolorum quisquam dicta, hic dolorem.</span
+        >
       </div>
-    </div>
+      <div class="section item">
+        <h2>Where I've Worked</h2>
+        <Timeline
+          :timeline-items="timelineItems"
+          :message-when-no-items="messageWhenNoItems"
+          :show-day-and-month="true"
+          order="desc"
+        />
+      </div>
+      <div class="section item">
+        <h2>My Projects</h2>
+      </div>
+      <div class="section item">
+        <div class="container">
+          <ProjectCard project="ProvenDB Database" class="provenDB" />
+        </div>
+      </div>
+      <div class="section item">
+        <div class="container">
+          <ProjectCard project="Compliance Vault" class="compVault" />
+        </div>
+      </div>
+      <div class="section item">
+        <div class="container">
+          <ProjectCard project="dbKoda" class="dbKoda" />
+        </div>
+      </div>
+      <div class="section item">
+        <div class="container">
+          <ProjectCard project="Learn2Play" class="l2p" />
+        </div>
+      </div>
+      <div class="section item">
+        <div :style="{ textAlign: 'center' }">
+          <div>
+            <a href="https://github.com/michaeljharrison" target="__none">
+              <a-button type="primary" shape="circle" icon="github" />
+            </a>
+            <a href="https://twitter.com/Code_With_MikeH" target="__none">
+              <a-button type="primary" shape="circle" icon="twitter" />
+            </a>
+          </div>
+          <div
+            :style="{ textAlign: 'center', marginTop: '14px', color: 'white' }"
+          >
+            © 2021 Michael Harrison
+          </div>
+        </div>
+      </div>
+    </VueScrollSnap>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Timeline from 'timeline-vuejs'
+import VueScrollSnap from 'vue-scroll-snap'
 export default Vue.extend({
-  components: { Timeline },
+  components: { Timeline, VueScrollSnap },
   data: () => ({
     messageWhenNoItems: 'There are not items',
     timelineItems: [
@@ -116,5 +152,28 @@ export default Vue.extend({
 
 .links {
   padding-top: 15px;
+}
+
+.section {
+  min-height: 100vh;
+}
+.snap {
+  /* Set the minimum height of the items to be the same as the height of the scroll-snap-container.*/
+  min-height: 90vh;
+}
+.scroll-snap-container {
+  height: 96vh;
+  width: 100vw;
+}
+
+.timeline {
+  max-width: 100% !important;
+}
+.wrapper-timeline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 </style>

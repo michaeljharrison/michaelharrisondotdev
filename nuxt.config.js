@@ -28,10 +28,21 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  googleFonts: {
+    download: true,
+    families: {
+      Roboto: true,
+      Montserrat: true,
+      Poppins: true,
+      Raleway: true,
+    },
+  },
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

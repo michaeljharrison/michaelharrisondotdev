@@ -16,22 +16,11 @@
           <a-menu-item key="4"> Publications </a-menu-item>
         </a-menu>
       </a-layout-header>
-      <a-layout-content :style="{ padding: '0', marginTop: '80px' }">
+      <a-layout-content :style="{ paddingTop: '64px' }">
         <div :style="{ minHeight: '380px' }">
           <Nuxt />
         </div>
       </a-layout-content>
-      <a-layout-footer :style="{ textAlign: 'center' }">
-        <div>
-          <a href="https://github.com/michaeljharrison" target="__none">
-            <a-button type="primary" shape="circle" icon="github" />
-          </a>
-          <a href="https://twitter.com/Code_With_MikeH" target="__none">
-            <a-button type="primary" shape="circle" icon="twitter" />
-          </a>
-        </div>
-        <div>© 2021 Michael Harrison</div>
-      </a-layout-footer>
     </a-layout>
   </div>
 </template>
