@@ -95,6 +95,7 @@
             subtitle="Digital Store for Compliance Documentation."
             class="compVault"
             :source="null"
+            :tags="['NodeJS', 'React', 'GraphQL', 'MongoDB']"
             website="https://www.provendb.com/solutions/compliance"
           />
         </div>
@@ -108,6 +109,7 @@
             title="dbKoda"
             subtitle="Open Source MongoDB IDE"
             class="dbKoda"
+            :tags="['NodeJS', 'React', 'Electron', 'MongoDB']"
             source="https://github.com/SouthbankSoftware/dbkoda"
             website="https://dbkoda.com"
           />
@@ -123,6 +125,7 @@
             subtitle="Cross Platform Digital Manuals"
             class="l2p"
             :source="null"
+            :tags="['Dart', 'Flutter', 'Mobile', 'Firebase']"
             website="https://learn2play.landen.co/"
           />
         </div>

@@ -12,11 +12,7 @@
         :src="require(`../assets/images/${project}-logo.svg`)"
       />
       <div class="stack">
-        <a-tag :color="color"> NodeJS </a-tag>
-        <a-tag :color="color"> Azure </a-tag>
-        <a-tag :color="color"> Kubernetes </a-tag>
-        <a-tag :color="color"> Golang </a-tag>
-        <a-tag :color="color"> Blockchain </a-tag>
+        <a-tag v-for="tag in tags" :key="tag" :color="color">{{ tag }}</a-tag>
       </div>
       <h3 :style="{ textAlign: 'start' }">{{ subtitle }}</h3>
       <span class="about" :style="{ textAlign: 'start' }"
@@ -42,7 +38,7 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  props: ['project', 'subtitle', 'color', 'source', 'website', 'title'],
+  props: ['project', 'subtitle', 'color', 'source', 'website', 'title', 'tags'],
   data() {
     return {
       visible: false,
