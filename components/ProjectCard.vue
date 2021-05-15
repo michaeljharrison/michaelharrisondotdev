@@ -1,18 +1,40 @@
 <template>
   <div class="projectCard">
+    <a-modal v-model="visible" :title="title" @ok="handleOk">
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </a-modal>
     <div class="stripe"></div>
     <div class="content">
       <img
         :class="project"
         :src="require(`../assets/images/${project}-logo.svg`)"
       />
-      <h3>{{ subtitle }}</h3>
-      <span
+      <div class="stack">
+        <a-tag :color="color"> NodeJS </a-tag>
+        <a-tag :color="color"> Azure </a-tag>
+        <a-tag :color="color"> Kubernetes </a-tag>
+        <a-tag :color="color"> Golang </a-tag>
+        <a-tag :color="color"> Blockchain </a-tag>
+      </div>
+      <h3 :style="{ textAlign: 'start' }">{{ subtitle }}</h3>
+      <span class="about" :style="{ textAlign: 'start' }"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo
         ex veritatis, mollitia ullam labore. Quo nisi, animi, numquam vero
         dolorem mollitia amet eum veritatis autem vitae quaerat pariatur
         expedita!</span
       >
+
+      <div class="buttons">
+        <a-button v-if="source" target="__none" :href="source">
+          Source Code
+        </a-button>
+        <a-button v-if="website" target="__none" :href="website">
+          Website
+        </a-button>
+        <a-button @click="showModal" type="primary"> Screenshots</a-button>
+      </div>
     </div>
   </div>
 </template>
@@ -20,7 +42,25 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  props: ['project', 'subtitle'],
+  props: ['project', 'subtitle', 'color', 'source', 'website', 'title'],
+  data() {
+    return {
+      visible: false,
+    }
+  },
+  methods: {
+    showModal() {
+      this.visible = true
+    },
+    handleOk(e) {
+      console.log(e)
+      this.visible = false
+    },
+    capitalize(str) {
+      const lower = str.toLowerCase()
+      return str.charAt(0).toUpperCase() + lower.slice(1)
+    },
+  },
 })
 </script>
 <style lang="less" scoped>
@@ -66,10 +106,7 @@ export default Vue.extend({
   }
 }
 
-.projectCard:nth-child(even) {
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+.ant-modal {
+  min-width: 94vw;
 }
 </style>

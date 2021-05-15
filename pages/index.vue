@@ -3,10 +3,11 @@
     <VueScrollSnap>
       <div
         class="section item"
+        id="home"
         :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
         <h1 :style="{ 'margin-bottom': '60px' }">MichaelHarrison.dev</h1>
-        <span
+        <span class="introText"
           >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
           numquam laborum cupiditate vero asperiores possimus consectetur error
           doloribus? A quaerat ullam ipsa dignissimos quod, consequatur optio
@@ -16,56 +17,180 @@
           aliquam mollitia in dolorum quisquam dicta, hic dolorem.</span
         >
       </div>
-      <div class="section item">
-        <h2>Where I've Worked</h2>
-        <Timeline
-          :timeline-items="timelineItems"
-          :message-when-no-items="messageWhenNoItems"
-          :show-day-and-month="true"
-          order="desc"
-        />
-      </div>
-      <div class="section item">
-        <h2>My Projects</h2>
-      </div>
-      <div class="section item">
-        <h2>ProvenDB</h2>
+      <div class="section item resume" id="resume">
         <div class="container">
+          <h2
+            :style="{
+              marginTop: '20px',
+              textAlign: 'center',
+              marginBottom: '30px',
+            }"
+          >
+            Where I've Worked
+          </h2>
+          <div
+            :style="{
+              marginBottom: '40px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              display: 'flex',
+            }"
+          >
+            <a-button
+              :style="{
+                width: '200px',
+                height: '50px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }"
+              type="primary"
+            >
+              Full Resume
+            </a-button>
+            <a-button
+              :style="{
+                width: '200px',
+                height: '50px',
+                marginLeft: '20px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }"
+              type="primary"
+            >
+              LinkedIn
+            </a-button>
+          </div>
+          <Timeline
+            :timeline-items="timelineItems"
+            :message-when-no-items="messageWhenNoItems"
+            :show-day-and-month="true"
+            order="desc"
+          />
+        </div>
+      </div>
+      <div class="section item" id="projects">
+        <div class="container">
+          <h2 :style="{ textAlign: 'start' }">ProvenDB</h2>
           <ProjectCard
             project="provendb"
+            title="ProvenDB"
+            color="#4c7d9b"
             subtitle="Blockchain Enabled Database"
             class="provenDB"
+            :source="null"
+            website="https://provendb.com"
           />
         </div>
       </div>
-      <div class="section item">
+      <div class="section item" id="compVault">
         <div class="container">
+          <h2 :style="{ textAlign: 'start' }">Compliance Vault</h2>
           <ProjectCard
-            project="provendb"
+            project="compvault"
+            title="Compliance Vault"
+            color="#7cadcb"
             subtitle="Digital Store for Compliance Documentation."
             class="compVault"
+            :source="null"
+            website="https://www.provendb.com/solutions/compliance"
           />
         </div>
       </div>
-      <div class="section item">
+      <div class="section item" id="dbKoda">
         <div class="container">
+          <h2 :style="{ textAlign: 'start' }">dbKoda</h2>
           <ProjectCard
-            project="provendb"
+            project="dbkoda"
+            color="#40455E"
+            title="dbKoda"
             subtitle="Open Source MongoDB IDE"
             class="dbKoda"
+            source="https://github.com/SouthbankSoftware/dbkoda"
+            website="https://dbkoda.com"
           />
         </div>
       </div>
-      <div class="section item">
+      <div class="section item" id="learn2play">
         <div class="container">
+          <h2 :style="{ textAlign: 'start' }">Learn2Play</h2>
           <ProjectCard
-            project="provendb"
+            project="l2p"
+            color="#3f5466"
+            title="Learn2Play"
             subtitle="Cross Platform Digital Manuals"
             class="l2p"
+            :source="null"
+            website="https://learn2play.landen.co/"
           />
         </div>
       </div>
-      <div class="section item">
+      <div class="section item" id="publications">
+        <h2
+          :style="{
+            marginTop: '20px',
+            textAlign: 'center',
+            marginBottom: '30px',
+          }"
+        >
+          Publications
+        </h2>
+        <div :style="{ marginLeft: 'auto', marginRight: 'auto' }">
+          <a-button
+            href="https://medium.com/@mike_831"
+            target="__none"
+            :style="{
+              width: '200px',
+              height: '50px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }"
+            type="primary"
+          >
+            Medium Articles
+          </a-button>
+        </div>
+        <div class="publication">
+          <h4><i>Apress - April 2021</i></h4>
+          <h3>MongoDB Performance Tuning</h3>
+          <h4>Optimizing MongoDB Databases and their Applications</h4>
+          <span
+            >Fast and complete guide to optimize the performance of MongoDB
+            databases and the applications that depend on them.</span
+          >
+          <div class="footer">
+            <a-button
+              type="primary"
+              href="https://www.apress.com/gp/book/9781484268780"
+              target="__none"
+              >Read It</a-button
+            >
+          </div>
+        </div>
+        <div class="publication">
+          <h4><i>Packt - December 2020</i></h4>
+          <h3>MongoDB Fundamentals</h3>
+          <h4>
+            A hands on guide to using MongoDB and Atlas in the real world.
+          </h4>
+          <span
+            >A practical, excercise based guide to learning the essential
+            MongoDB skills required in the workplace with a hands-on
+            focus.</span
+          >
+          <div class="footer">
+            <a-button
+              type="primary"
+              href="https://www.packtpub.com/product/mongodb-fundamentals/9781839210648"
+              target="__none"
+              >Read It</a-button
+            >
+          </div>
+        </div>
+      </div>
+      <div class="section item" id="contact">
         <div :style="{ textAlign: 'center' }">
           <div>
             <a href="https://github.com/michaeljharrison" target="__none">
@@ -96,28 +221,28 @@ export default Vue.extend({
     messageWhenNoItems: 'There are not items',
     timelineItems: [
       {
-        from: new Date(2018, 7),
+        from: new Date(2018, 11),
         title: 'Lead Developer - Southbank Software',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
+          'Lead recruitment, design and development from the ground up for ProvenDB, a Blockchain Enabled Database and the Compliance Vault, a web app allowing users to easily anchor their compliance documentation on public block chains. Responsabilities included full stack development, cloud architecture and leading the team using agile methodologies. ',
       },
       {
-        from: new Date(2016, 1),
+        from: new Date(2016, 11),
         title: 'Senior Developer - Southbank Software',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
+          'Senior developer and Scrum Master on dbKoda, a next generation, open source IDE for MongoDB. Responsabilities included running agile related activities, along side both front and back end development of an Electron App.',
       },
       {
-        from: new Date(2016, 6),
+        from: new Date(2016, 2),
         title: 'Team Lead - Telstra Automation',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
+          'Lead a small team of 3 developers to create bespoke Automation and Dashboard solutions for internal and external stake holders. Key responsabilties included requirements gathering, solution design, coordinating with stakeholders and developing both front and back end.',
       },
       {
-        from: new Date(2012, 1),
+        from: new Date(2015, 2),
         title: 'Developer - Telstra Big Data',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
+          'Junior Developer at Telstra Big Data as part of the Telstra Graduate Program. Main responsability involved maintaining Splunk ingestion pipelines, NPS data cleansing pipelines and creation of a customer experience dashboard.',
       },
     ],
   }),
@@ -178,7 +303,7 @@ export default Vue.extend({
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 </style>

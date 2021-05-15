@@ -7,6 +7,7 @@
 @dark-gray: #424242;
 @darker-gray: #212121;
 @pdb-dark-blue: #1c4d6b;
+@pdb-blue: #296f9b;
 @pdb-light-blue: #00b6d3;
 @dbkoda-purple: #363951;
 @light-purple: #9B51E0;
@@ -16,7 +17,7 @@
 @light-teal: #3f5466;
 @background-gradient: linear-gradient(180deg, rgba(65,43,57,1) 0%, rgba(81,54,64,1) 69%, rgba(255,255,255,0) 100%);
 @background-gradient-pdb: linear-gradient(294.44deg, #1D3D57 -28.26%, #20455F 1.72%, #2A5B76 35.19%, #39809C 70.05%, #4AA6C4 105.6%);
-@background-gradient-compvault: linear-gradient(294.44deg, #1D3D57 -28.26%, #20455F 1.72%, #2A5B76 35.19%, #39809C 70.05%, #4AA6C4 105.6%);
+@background-gradient-compvault: linear-gradient(-294.44deg, #254e70 -28.26%, #2b5c80 1.72%, #357597 35.19%, #4090af 70.05%, #4AA6C4 105.6%);
 @background-gradient-dbkoda: linear-gradient(180deg, #40455E 0%, #363951 48.44%, #262835 100%);
 @background-gradient-l2p: linear-gradient(0deg, #3f5466 0%, #212d37 100%);
 
@@ -64,6 +65,9 @@
   }
 }
 
+h1, h2, h3, h4 {
+  // font-family: 'Raleway'
+}
 h1 {
   max-width: 100%;
   color: @off-white;
@@ -116,25 +120,75 @@ span {
     color: white;
     margin-bottom: 0px;
     width: 100%;
-    margin-left: 4%;
+    text-align: start;
     
   }
 
+  .resume {
+    h2 {
+      text-align: center !important;
+    }
+  }
+
+  .publication {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.75);
+    padding:20px;
+    span {
+      color: black;
+      max-width: 850px;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 0px;
+    }
+    h4 {
+      color: @dark-gray;
+      margin-bottom: 20px;
+    }
+    a {
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+.projectCard {
   .content {
     text-align: start;
     padding-left: 10px;
-    padding-right: 10px;;
+    padding-right: 30px;
     h3 {
       width: 100%;
       text-align: start;
-      margin-top: 20px;
     }
     span {
       color: @dark-gray;
       text-align: start;
     }
   }
+  .buttons {
+    margin-top: auto;
+    margin-left: auto;
+  }
+  .stack {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    span {
+      color: white;
+    }
+  }
 }
+
 
 .provenDB {
   h3{
@@ -143,8 +197,51 @@ span {
   .stripe {
     background: @background-gradient-pdb !important;
   }
+  .buttons {
+    .ant-btn {
+      border: 1px solid @pdb-dark-blue;
+    }
+    .ant-btn:hover {
+      
+      border: 1px solid @pdb-light-blue;
+    }
+    .ant-btn-primary {
+      opacity: 1;
+      background: @background-gradient-pdb;
+      border: 1px solid @pdb-dark-blue;
+      span {
+        color: @off-white;
+      }
+    }
+    .ant-btn-primary:hover {
+      opacity: 0.8;
+    }
+  }
 }
 .compVault {
+  img {
+    width: 65% !important;
+  }
+  .buttons {
+    .ant-btn {
+      border: 1px solid @pdb-blue;
+    }
+    .ant-btn:hover {
+      
+      border: 1px solid @pdb-light-blue;
+    }
+    .ant-btn-primary {
+      opacity: 1;
+      background: @background-gradient-compvault;
+      border: 1px solid @pdb-blue;
+      span {
+        color: @off-white;
+      }
+    }
+    .ant-btn-primary:hover {
+      opacity: 0.8;
+    }
+  }
   h3 {
     color: @pdb-dark-blue !important;
   }
@@ -153,6 +250,29 @@ span {
   }
 }
 .dbKoda {
+  .buttons {
+    .ant-btn {
+      border: 1px solid @dbkoda-purple;
+    }
+    .ant-btn:hover {
+      
+      border: 1px solid @dbkoda-purple;
+    }
+    .ant-btn-primary {
+      opacity: 1;
+      background: @background-gradient-dbkoda;
+      border: 1px solid @dbkoda-purple;
+      span {
+        color: @off-white;
+      }
+    }
+    .ant-btn-primary:hover {
+      opacity: 0.8;
+    }
+  }
+  img {
+    height: 30%;
+  }
   h3 {
     color: @dbkoda-purple !important;
   }
@@ -161,6 +281,29 @@ span {
   }
 }
 .l2p {
+  .buttons {
+    .ant-btn {
+      border: 1px solid @dark-teal;
+    }
+    .ant-btn:hover {
+      
+      border: 1px solid @light-teal;
+    }
+    .ant-btn-primary {
+      opacity: 1;
+      background: @background-gradient-l2p;
+      border: 1px solid @light-teal;
+      span {
+        color: @off-white;
+      }
+    }
+    .ant-btn-primary:hover {
+      opacity: 0.8;
+    }
+  }
+  img {
+    height: 30%;
+  }
   h3 {
     color: @dark-teal !important;
   }
@@ -172,4 +315,18 @@ span {
 .container {
   padding-left: 2%;
   padding-right: 2%
+}
+
+#components-back-top-demo-custom .ant-back-top {
+  bottom: 100px;
+}
+#components-back-top-demo-custom .ant-back-top-inner {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  background-color: #1088e9;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
 }

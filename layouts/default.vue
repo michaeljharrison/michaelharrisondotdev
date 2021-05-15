@@ -7,13 +7,20 @@
           class="menu"
           theme="dark"
           mode="horizontal"
-          :default-selected-keys="['2']"
+          v-model="current"
           :style="{ lineHeight: '64px' }"
         >
-          <a-menu-item key="1"> Home </a-menu-item>
-          <a-menu-item key="2"> Resume </a-menu-item>
-          <a-menu-item key="3"> Projects </a-menu-item>
-          <a-menu-item key="4"> Publications </a-menu-item>
+          <a-menu-item key="home"> <a href="#home">Home</a> </a-menu-item>
+          <a-menu-item key="resume"> <a href="#resume">Resume</a> </a-menu-item>
+          <a-menu-item key="projects">
+            <a href="#projects">Projects</a>
+          </a-menu-item>
+          <a-menu-item key="publications">
+            <a href="#publications">Publications</a>
+          </a-menu-item>
+          <a-menu-item key="contact">
+            <a href="#contact">Contact</a>
+          </a-menu-item>
         </a-menu>
       </a-layout-header>
       <a-layout-content :style="{ paddingTop: '64px' }">
@@ -27,7 +34,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      current: ['home'],
+    }
+  },
+})
 </script>
 
 <style lang="scss">
