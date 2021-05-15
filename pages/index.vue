@@ -80,6 +80,7 @@
             subtitle="Blockchain Enabled Database"
             class="provenDB"
             :source="null"
+            :tags="['NodeJS', 'GoLang', 'Kubernetes', 'Azure', 'Blockchain']"
             website="https://provendb.com"
           />
         </div>
