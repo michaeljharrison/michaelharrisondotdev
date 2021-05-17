@@ -2,11 +2,11 @@
   <div class="column">
     <VueScrollSnap>
       <div
-        class="section item"
         id="home"
+        class="section item"
         :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
-        <h1 :style="{ 'margin-bottom': '60px' }">MichaelHarrison.dev</h1>
+        <h1 :style="{ 'margin-bottom': '60px' }">Michael Harrison.dev</h1>
         <span class="introText"
           >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
           numquam laborum cupiditate vero asperiores possimus consectetur error
@@ -17,13 +17,13 @@
           aliquam mollitia in dolorum quisquam dicta, hic dolorem.</span
         >
       </div>
-      <div class="section item resume" id="resume">
+      <div id="resume" class="section item resume">
         <div class="container">
           <h2
             :style="{
-              marginTop: '20px',
+              paddingTop: '64px',
               textAlign: 'center',
-              marginBottom: '30px',
+              marginBottom: '20px',
             }"
           >
             Where I've Worked
@@ -70,7 +70,7 @@
           />
         </div>
       </div>
-      <div class="section item" id="projects">
+      <div id="projects" class="section item">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">ProvenDB</h2>
           <ProjectCard
@@ -85,7 +85,7 @@
           />
         </div>
       </div>
-      <div class="section item" id="compVault">
+      <div id="compVault" class="section item">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">Compliance Vault</h2>
           <ProjectCard
@@ -100,7 +100,7 @@
           />
         </div>
       </div>
-      <div class="section item" id="dbKoda">
+      <div id="dbKoda" class="section item">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">dbKoda</h2>
           <ProjectCard
@@ -115,7 +115,7 @@
           />
         </div>
       </div>
-      <div class="section item" id="learn2play">
+      <div id="learn2play" class="section item">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">Learn2Play</h2>
           <ProjectCard
@@ -130,71 +130,76 @@
           />
         </div>
       </div>
-      <div class="section item" id="publications">
-        <h2
-          :style="{
-            marginTop: '20px',
-            textAlign: 'center',
-            marginBottom: '30px',
-          }"
-        >
-          Publications
-        </h2>
-        <div :style="{ marginLeft: 'auto', marginRight: 'auto' }">
-          <a-button
-            href="https://medium.com/@mike_831"
-            target="__none"
+      <div id="publications" class="section item publications">
+        <div class="container">
+          <h2
             :style="{
-              width: '200px',
-              height: '50px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
+              paddingTop: '64px',
+              textAlign: 'center',
+              marginBottom: '20px',
             }"
-            type="primary"
           >
-            Medium Articles
-          </a-button>
-        </div>
-        <div class="publication">
-          <h4><i>Apress - April 2021</i></h4>
-          <h3>MongoDB Performance Tuning</h3>
-          <h4>Optimizing MongoDB Databases and their Applications</h4>
-          <span
-            >Fast and complete guide to optimize the performance of MongoDB
-            databases and the applications that depend on them.</span
+            Publications
+          </h2>
+          <div
+            class="buttons"
+            :style="{ marginLeft: 'auto', marginRight: 'auto' }"
           >
-          <div class="footer">
             <a-button
-              type="primary"
-              href="https://www.apress.com/gp/book/9781484268780"
+              href="https://medium.com/@mike_831"
               target="__none"
-              >Read It</a-button
+              :style="{
+                width: '200px',
+                height: '50px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }"
+              type="primary"
             >
+              Medium Articles
+            </a-button>
           </div>
-        </div>
-        <div class="publication">
-          <h4><i>Packt - December 2020</i></h4>
-          <h3>MongoDB Fundamentals</h3>
-          <h4>
-            A hands on guide to using MongoDB and Atlas in the real world.
-          </h4>
-          <span
-            >A practical, excercise based guide to learning the essential
-            MongoDB skills required in the workplace with a hands-on
-            focus.</span
-          >
-          <div class="footer">
-            <a-button
-              type="primary"
-              href="https://www.packtpub.com/product/mongodb-fundamentals/9781839210648"
-              target="__none"
-              >Read It</a-button
+          <div class="publication item">
+            <h4><i>Apress - April 2021</i></h4>
+            <h3>MongoDB Performance Tuning</h3>
+            <h4>Optimizing MongoDB Databases and their Applications</h4>
+            <span class="about"
+              >Fast and complete guide to optimize the performance of MongoDB
+              databases and the applications that depend on them.</span
             >
+            <div class="footer">
+              <a-button
+                type="primary"
+                href="https://www.apress.com/gp/book/9781484268780"
+                target="__none"
+                >Read It</a-button
+              >
+            </div>
+          </div>
+          <div class="publication">
+            <h4><i>Packt - December 2020</i></h4>
+            <h3>MongoDB Fundamentals</h3>
+            <h4>
+              A hands on guide to using MongoDB and Atlas in the real world.
+            </h4>
+            <span class="about"
+              >A practical, excercise based guide to learning the essential
+              MongoDB skills required in the workplace with a hands-on
+              focus.</span
+            >
+            <div class="footer">
+              <a-button
+                type="primary"
+                href="https://www.packtpub.com/product/mongodb-fundamentals/9781839210648"
+                target="__none"
+                >Read It</a-button
+              >
+            </div>
           </div>
         </div>
       </div>
-      <div class="section item" id="contact">
+      <div id="contact" class="section item">
         <div :style="{ textAlign: 'center' }">
           <div>
             <a href="https://github.com/michaeljharrison" target="__none">

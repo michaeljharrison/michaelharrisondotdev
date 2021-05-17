@@ -4,10 +4,10 @@
       <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
         <div class="logo" />
         <a-menu
+          v-model="current"
           class="menu"
           theme="dark"
           mode="horizontal"
-          v-model="current"
           :style="{ lineHeight: '64px' }"
         >
           <a-menu-item key="home"> <a href="#home">Home</a> </a-menu-item>
@@ -90,12 +90,6 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
-
-.ant-layout-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .menu {

@@ -1,9 +1,7 @@
 <template>
   <div class="projectCard">
     <a-modal v-model="visible" :title="title" @ok="handleOk">
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
+      <p>Under construction</p>
     </a-modal>
     <div class="stripe"></div>
     <div class="content">
@@ -29,7 +27,7 @@
         <a-button v-if="website" target="__none" :href="website">
           Website
         </a-button>
-        <a-button @click="showModal" type="primary"> Screenshots</a-button>
+        <a-button type="primary" @click="showModal"> Screenshots</a-button>
       </div>
     </div>
   </div>
