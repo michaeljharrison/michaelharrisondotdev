@@ -3,7 +3,7 @@
     <VueScrollSnap>
       <div
         id="home"
-        class="section item"
+        class="section item sec1"
         :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
         <h1 :style="{ 'margin-bottom': '60px' }">Michael Harrison.dev</h1>
@@ -17,7 +17,7 @@
           aliquam mollitia in dolorum quisquam dicta, hic dolorem.</span
         >
       </div>
-      <div id="resume" class="section item resume">
+      <div id="resume" class="section item resume sec2">
         <div class="container">
           <h2
             :style="{
@@ -70,7 +70,7 @@
           />
         </div>
       </div>
-      <div id="projects" class="section item">
+      <div id="projects" class="section item sec3">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">ProvenDB</h2>
           <ProjectCard
@@ -85,7 +85,7 @@
           />
         </div>
       </div>
-      <div id="compVault" class="section item">
+      <div id="compVault" class="section item sec4">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">Compliance Vault</h2>
           <ProjectCard
@@ -100,7 +100,7 @@
           />
         </div>
       </div>
-      <div id="dbKoda" class="section item">
+      <div id="dbKoda" class="section item sec5">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">dbKoda</h2>
           <ProjectCard
@@ -115,12 +115,12 @@
           />
         </div>
       </div>
-      <div id="learn2play" class="section item">
+      <div id="learn2play" class="section item sec6">
         <div class="container">
           <h2 :style="{ textAlign: 'start' }">Learn2Play</h2>
           <ProjectCard
             project="l2p"
-            color="#3f5466"
+            color="#65D4BA"
             title="Learn2Play"
             subtitle="Cross Platform Digital Manuals"
             class="l2p"
@@ -130,7 +130,7 @@
           />
         </div>
       </div>
-      <div id="publications" class="section item publications">
+      <div id="publications" class="section item publications sec7">
         <div class="container">
           <h2
             :style="{
@@ -141,30 +141,11 @@
           >
             Publications
           </h2>
-          <div
-            class="buttons"
-            :style="{ marginLeft: 'auto', marginRight: 'auto' }"
-          >
-            <a-button
-              href="https://medium.com/@mike_831"
-              target="__none"
-              :style="{
-                width: '200px',
-                height: '50px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }"
-              type="primary"
-            >
-              Medium Articles
-            </a-button>
-          </div>
           <div class="publication item">
             <h4><i>Apress - April 2021</i></h4>
             <h3>MongoDB Performance Tuning</h3>
             <h4>Optimizing MongoDB Databases and their Applications</h4>
-            <span class="about"
+            <span :style="{ textAlign: 'start' }" class="about"
               >Fast and complete guide to optimize the performance of MongoDB
               databases and the applications that depend on them.</span
             >
@@ -183,7 +164,7 @@
             <h4>
               A hands on guide to using MongoDB and Atlas in the real world.
             </h4>
-            <span class="about"
+            <span :style="{ textAlign: 'start' }" class="about"
               >A practical, excercise based guide to learning the essential
               MongoDB skills required in the workplace with a hands-on
               focus.</span
@@ -197,16 +178,71 @@
               >
             </div>
           </div>
+          <div class="publication item">
+            <h4><i>Medium - July 2019</i></h4>
+            <h3>Building a NodeJS/Blockchain app in 15 minutes</h3>
+            <h4>Step by step tutorial creating blockchain app.</h4>
+            <span :style="{ textAlign: 'start' }" class="about"
+              >Using ProvenDB and create-react-app this tutorial shows you how
+              to spin up a web based blockchain-integrated app in under 15
+              minutes, for free.</span
+            >
+            <div class="footer">
+              <a-button
+                type="primary"
+                href="https://medium.com/provendb/building-a-nodejs-blockchain-app-in-15-minutes-7dfc85d99ac9"
+                target="__none"
+                >Read It</a-button
+              >
+            </div>
+          </div>
+          <div class="publication item">
+            <h4><i>Medium - April 2018</i></h4>
+            <h3>dbKoda Tips and Tricks</h3>
+            <h4>Useful tips and tricks for the dbKoda application.</h4>
+            <span :style="{ textAlign: 'start' }" class="about"
+              >dbKoda contains a huge trove of features to help you work with
+              your MongoDB deployments, here are some you might not know
+              about.</span
+            >
+            <div class="footer">
+              <a-button
+                type="primary"
+                href="https://medium.com/dbkoda/getting-started-with-mongodb-and-dbkoda-816da494005"
+                target="__none"
+                >Read It</a-button
+              >
+            </div>
+          </div>
+          <div class="publication item">
+            <h4><i>Medium - December 2017</i></h4>
+            <h3>Getting Started with MongoDB and dbKoda</h3>
+            <h4>MongoDB is hard, dbKoda makes it easier.</h4>
+            <span :style="{ textAlign: 'start' }" class="about"
+              >MongoDB can be very difficult to get started with, but by using a
+              free GUI like dbKoda, you can get the most out of MongoDB quickly
+              and easily.</span
+            >
+            <div class="footer">
+              <a-button
+                type="primary"
+                href="https://medium.com/dbkoda/getting-started-with-mongodb-and-dbkoda-816da494005"
+                target="__none"
+                >Read It</a-button
+              >
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="contact" class="section item">
-        <div :style="{ textAlign: 'center' }">
+        <div :style="{ textAlign: 'center', marginTop: '30px' }">
           <div>
             <a href="https://github.com/michaeljharrison" target="__none">
               <a-button type="primary" shape="circle" icon="github" />
             </a>
             <a href="https://twitter.com/Code_With_MikeH" target="__none">
               <a-button type="primary" shape="circle" icon="twitter" />
+            </a>
+            <a href="https://medium.com/@mike_831" target="__none">
+              <a-button type="primary" shape="circle" icon="medium" />
             </a>
           </div>
           <div
@@ -310,8 +346,7 @@ export default Vue.extend({
 }
 .wrapper-timeline {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

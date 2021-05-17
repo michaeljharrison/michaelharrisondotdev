@@ -15,15 +15,16 @@
 @dark-red: #513640;
 @dark-teal: #212d37;
 @light-teal: #3f5466;
+@l2p-teal: #65D4BA;
 @background-gradient: linear-gradient(180deg, rgba(65,43,57,1) 0%, rgba(81,54,64,1) 69%, rgba(255,255,255,0) 100%);
 @background-gradient-pdb: linear-gradient(294.44deg, #1D3D57 -28.26%, #20455F 1.72%, #2A5B76 35.19%, #39809C 70.05%, #4AA6C4 105.6%);
 @background-gradient-compvault: linear-gradient(-294.44deg, #254e70 -28.26%, #2b5c80 1.72%, #357597 35.19%, #4090af 70.05%, #4AA6C4 105.6%);
 @background-gradient-dbkoda: linear-gradient(180deg, #40455E 0%, #363951 48.44%, #262835 100%);
-@background-gradient-l2p: linear-gradient(0deg, #3f5466 0%, #212d37 100%);
+@background-gradient-l2p: linear-gradient(180deg, #65D4BA 0%, #3f5466 100%);
 
 @body-background: @dark-red;
 @component-background: #fff;
-@font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+@font-family: 'Raleway', 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
   'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol';
 @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -50,6 +51,9 @@
 
 div {
   width: 100%;
+}
+p {
+  font-weight: 500 !important;
 }
 .column {
   margin: 0 auto;
@@ -107,6 +111,12 @@ span {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   max-width: 420px;
+  .item {
+    padding-right: 6px;
+  }
+  .dot {
+    background: @dark-purple !important;
+  }
 }
 .section-year {
   color: @off-white;
@@ -126,7 +136,6 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
   width: 100%;
   h2 {
     color: white;
@@ -181,7 +190,7 @@ margin-bottom: 12px;
     }
     h4 {
       color: @dark-gray;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
     }
     a {
       span {
@@ -233,6 +242,9 @@ margin-bottom: 12px;
       color: white;
       margin-bottom: 8px;
     }
+    .ant-tag:hover {
+      opacity: 1 !important;
+    }
   }
   .about {
     margin-bottom: 12px;
@@ -261,11 +273,11 @@ margin-bottom: 12px;
     }
     .ant-btn:hover {
       
-      border: 1px solid @pdb-light-blue;
+      border: 1px solid @pdb-dark-blue;
     }
     .ant-btn-primary {
       opacity: 1;
-      background: @background-gradient-pdb;
+      background: @pdb-dark-blue;
       border: 1px solid @pdb-dark-blue;
       span {
         color: @off-white;
@@ -286,11 +298,11 @@ margin-bottom: 12px;
     }
     .ant-btn:hover {
       
-      border: 1px solid @pdb-light-blue;
+      border: 1px solid @pdb-blue;
     }
     .ant-btn-primary {
       opacity: 1;
-      background: @background-gradient-compvault;
+      background: @pdb-blue;
       border: 1px solid @pdb-blue;
       span {
         color: @off-white;
@@ -318,7 +330,7 @@ margin-bottom: 12px;
     }
     .ant-btn-primary {
       opacity: 1;
-      background: @background-gradient-dbkoda;
+      background: @dbkoda-purple;
       border: 1px solid @dbkoda-purple;
       span {
         color: @off-white;
@@ -339,20 +351,26 @@ margin-bottom: 12px;
   }
 }
 .l2p {
+  .stack {
+    .ant-tag-has-color {
+      color: @dark-gray;
+    }
+  }
   .buttons {
     .ant-btn {
-      border: 1px solid @dark-teal;
+      
+      border: 1px solid @l2p-teal;
     }
     .ant-btn:hover {
       
-      border: 1px solid @light-teal;
+      border: 1px solid @l2p-teal;
     }
     .ant-btn-primary {
       opacity: 1;
-      background: @background-gradient-l2p;
-      border: 1px solid @light-teal;
+      background: @l2p-teal;
+      border: 1px solid @l2p-teal;
       span {
-        color: @off-white;
+        color: @dark-gray;
       }
     }
     .ant-btn-primary:hover {
@@ -387,4 +405,24 @@ margin-bottom: 12px;
   color: #fff;
   text-align: center;
   font-size: 20px;
+}
+
+.sec1 {
+  background: linear-gradient(180deg, rgb(57, 37, 50) 0%, rgba(81,54,64,1) 65%, rgba(117,51,93,0.1)100%);
+}
+.sec2{
+  background: rgb(117,51,93);
+background: linear-gradient(180deg, rgba(117,51,93,0.1) 0%, rgba(117,51,93,1) 65%, #296f9b 100%);
+}
+.sec3 {
+  background: linear-gradient(180deg, #296f9b 0%, #296f9b 65%, #0095ac 100%);
+}
+.sec4 {
+  background: linear-gradient(180deg, #0095ac 0%, #0095ac 65%, #363951 100%);
+}
+.sec5 {
+  background: linear-gradient(180deg, #363951 0%, #363951 65%, #3f5466 100%);
+}
+.sec6 {
+  background: linear-gradient(180deg, #3f5466 0%, #3f5466 65%, rgba(255,255,255,0) 100%);
 }
