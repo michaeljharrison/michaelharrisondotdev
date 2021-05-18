@@ -143,7 +143,7 @@
             Publications
           </h2>
           <div class="publication item">
-            <h4><i>Apress - April 2021</i></h4>
+            <h4><i>Book - Apress - April 2021</i></h4>
             <h3>MongoDB Performance Tuning</h3>
             <h4>Optimizing MongoDB Databases and their Applications</h4>
             <span :style="{ textAlign: 'start' }" class="about"
@@ -160,7 +160,7 @@
             </div>
           </div>
           <div class="publication">
-            <h4><i>Packt - December 2020</i></h4>
+            <h4><i>Book - Packt - December 2020</i></h4>
             <h3>MongoDB Fundamentals</h3>
             <h4>
               A hands on guide to using MongoDB and Atlas in the real world.

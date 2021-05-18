@@ -9,7 +9,9 @@
           mode="horizontal"
           :style="{ lineHeight: '64px' }"
         >
-          <a-menu-item key="home"> <a href="#home">Home</a> </a-menu-item>
+          <a-menu-item key="home" class="logo">
+            <a href="#home">MH.dev</a>
+          </a-menu-item>
           <a-menu-item key="resume"> <a href="#resume">Resume</a> </a-menu-item>
           <a-menu-item key="projects">
             <a href="#projects">Projects</a>
