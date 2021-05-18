@@ -2,7 +2,6 @@
   <div>
     <a-layout id="components-layout-demo-fixed" class="layout">
       <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
-        <div class="logo" />
         <a-menu
           v-model="current"
           class="menu"
@@ -17,9 +16,6 @@
           </a-menu-item>
           <a-menu-item key="publications">
             <a href="#publications">Publications</a>
-          </a-menu-item>
-          <a-menu-item key="contact">
-            <a href="#contact">Contact</a>
           </a-menu-item>
         </a-menu>
       </a-layout-header>
