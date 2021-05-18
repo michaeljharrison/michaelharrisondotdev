@@ -3,6 +3,7 @@
     <VueScrollSnap>
       <div
         id="home"
+        ref="homeRef"
         class="section item sec1"
         :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
@@ -233,6 +234,10 @@
             </div>
           </div>
         </div>
+        <a :style="{ marginTop: '10px' }" href="#home">
+          <a-button type="primary" shape="circle" icon="arrow-up" />
+        </a>
+
         <div :style="{ textAlign: 'center', marginTop: '30px' }">
           <div>
             <a href="https://github.com/michaeljharrison" target="__none">
@@ -245,6 +250,7 @@
               <a-button type="primary" shape="circle" icon="medium" />
             </a>
           </div>
+
           <div
             :style="{ textAlign: 'center', marginTop: '14px', color: 'white' }"
           >
