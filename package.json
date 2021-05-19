@@ -28,7 +28,7 @@
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.27.0",
     "sass": "^1.32.12",
-    "sass-loader": "10",
+    "sass-loader": "11",
     "timeline-vuejs": "^1.1.7",
     "vue-scroll-snap": "^0.1.11"
   },
