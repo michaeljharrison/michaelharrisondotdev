@@ -7,7 +7,8 @@
         class="section item sec1"
         :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
-        <h1 :style="{ 'margin-bottom': '60px' }">Michael Harrison.dev</h1>
+        <h1 :style="{ 'margin-bottom': '0px' }">Michael Harrison.dev</h1>
+        <img class="dp" :src="require(`../assets/images/mike-hero-dp.jpg`)" />
         <span class="introText"
           >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
           numquam laborum cupiditate vero asperiores possimus consectetur error
@@ -35,6 +36,7 @@
               marginLeft: 'auto',
               marginRight: 'auto',
               display: 'flex',
+              justifyContent: 'center',
             }"
           >
             <a-button
@@ -49,19 +51,24 @@
             >
               Full Resume
             </a-button>
-            <a-button
-              :style="{
-                width: '200px',
-                height: '50px',
-                marginLeft: '20px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }"
-              type="primary"
+            <a
+              href="https://www.linkedin.com/in/michaelharrisonaus/"
+              target="__none"
             >
-              LinkedIn
-            </a-button>
+              <a-button
+                :style="{
+                  width: '200px',
+                  height: '50px',
+                  marginLeft: '20px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }"
+                type="primary"
+              >
+                LinkedIn
+              </a-button>
+            </a>
           </div>
           <Timeline
             :timeline-items="timelineItems"
@@ -248,6 +255,12 @@
             </a>
             <a href="https://medium.com/@mike_831" target="__none">
               <a-button type="primary" shape="circle" icon="medium" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/michaelharrisonaus/"
+              target="__none"
+            >
+              <a-button type="primary" shape="circle" icon="linkedin" />
             </a>
           </div>
 
