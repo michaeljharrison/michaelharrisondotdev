@@ -1,7 +1,44 @@
 <template>
   <div class="projectCard">
     <a-modal v-model="visible" :title="title" @ok="handleOk">
-      <p>Under construction</p>
+      <a-carousel>
+        <div
+          :style="{
+            display: 'flex !important',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }"
+        >
+          <img
+            class="screenshot"
+            :src="require(`../assets/images/screenshots/${project}-1.jpeg`)"
+          />
+        </div>
+        <div
+          :style="{
+            display: 'flex !important',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }"
+        >
+          <img
+            class="screenshot"
+            :src="require(`../assets/images/screenshots/${project}-2.jpeg`)"
+          />
+        </div>
+        <div
+          :style="{
+            display: 'flex !important',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }"
+        >
+          <img
+            class="screenshot"
+            :src="require(`../assets/images/screenshots/${project}-3.jpeg`)"
+          />
+        </div>
+      </a-carousel>
     </a-modal>
     <div class="stripe"></div>
     <div class="content">
@@ -13,12 +50,9 @@
         <a-tag v-for="tag in tags" :key="tag" :color="color">{{ tag }}</a-tag>
       </div>
       <h3 :style="{ textAlign: 'start' }">{{ subtitle }}</h3>
-      <span class="about" :style="{ textAlign: 'start' }"
-        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo
-        ex veritatis, mollitia ullam labore. Quo nisi, animi, numquam vero
-        dolorem mollitia amet eum veritatis autem vitae quaerat pariatur
-        expedita!</span
-      >
+      <span class="about" :style="{ textAlign: 'start' }">{{
+        description
+      }}</span>
 
       <div class="buttons">
         <a-button v-if="source" target="__none" :href="source">
@@ -36,7 +70,16 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  props: ['project', 'subtitle', 'color', 'source', 'website', 'title', 'tags'],
+  props: [
+    'project',
+    'subtitle',
+    'color',
+    'source',
+    'website',
+    'title',
+    'tags',
+    'description',
+  ],
   data() {
     return {
       visible: false,
@@ -102,5 +145,33 @@ export default Vue.extend({
 
 .ant-modal {
   min-width: 94vw;
+}
+.ant-carousel {
+  .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
+
+  .custom-slick-arrow {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgba(31, 45, 61, 0.11);
+    opacity: 0.3;
+  }
+  .custom-slick-arrow:before {
+    display: none;
+  }
+  .custom-slick-arrow:hover {
+    opacity: 0.5;
+  }
+
+  .slick-slide h3 {
+    color: #fff;
+  }
 }
 </style>

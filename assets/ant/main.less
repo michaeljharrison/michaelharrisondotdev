@@ -50,10 +50,36 @@
 
 
 
+
+
+
+.slick-dots{
+  bottom: -10px !important;
+  button {
+    color: black !important;
+    height: 10px !important;
+    background: black !important;
+  }
+  .slick-active {
+    background: @dark-purple !important;
+  }
+}
+
 .dp {
   width: 25vw;
+  max-width: 260px;
   border-radius:14px;
 }
+
+.ant-modal {
+  margin: 0px;
+  width: 100% !important;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 .logo {
   a {
@@ -97,6 +123,9 @@ p {
   }
 }
 
+p.description-item {
+  white-space: break-spaces;
+}
 h1, h2, h3, h4 {
   // font-family: 'Raleway'
 }
@@ -105,11 +134,19 @@ h1 {
   color: @off-white;
   font-size: 54px;
   font-weight: lighter;
+  text-align:center;
 }
 h2 {
   color: @light-gray;
   font-size: 34px;
   font-weight: bold;
+}
+h3.subtitle {
+  color: @light-gray;
+  font-size: 30px;
+  opacity: 0.5;
+  font-weight: bold;
+  text-align:center;
 }
 span {
   max-width: 100%;
@@ -283,6 +320,12 @@ margin-bottom: 12px;
     }
   }
 }
+.screenshot {
+  max-width: 100%;
+  max-height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 .provenDB {
@@ -450,4 +493,15 @@ background: linear-gradient(180deg, rgba(117,51,93,0.1) 0%, rgba(117,51,93,1) 65
 }
 .sec6 {
   background: linear-gradient(180deg, #3f5466 0%, #3f5466 65%, rgba(255,255,255,0) 100%);
+}
+
+.introText {
+  font-size:24px !important;
+  width: 65vw
+}
+@media only screen and (max-width: 600px) {
+  .introText {
+    width:95vw;
+    font-size: 16px !important;
+  }
 }

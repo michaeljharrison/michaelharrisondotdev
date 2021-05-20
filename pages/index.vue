@@ -7,16 +7,18 @@
         class="section item sec1"
         :style="{ 'padding-left': '2%', 'padding-right': '2%' }"
       >
-        <h1 :style="{ 'margin-bottom': '0px' }">Michael Harrison.dev</h1>
+        <div>
+          <h1 :style="{ 'margin-bottom': '0px' }">Michael Harrison.dev</h1>
+          <h3 class="subtitle">Developer and Massive Geek.</h3>
+        </div>
         <img class="dp" :src="require(`../assets/images/mike-hero-dp.jpg`)" />
         <span class="introText"
-          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-          numquam laborum cupiditate vero asperiores possimus consectetur error
-          doloribus? A quaerat ullam ipsa dignissimos quod, consequatur optio
-          facere saepe ut sequi. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Cumque voluptas architecto tempore illo obcaecati
-          sit rerum exercitationem libero atque, quaerat deserunt doloremque
-          aliquam mollitia in dolorum quisquam dicta, hic dolorem.</span
+          >I'm a full-stack software engineer, which really just means I can
+          create bugs in a lot of different places. I'm also a reluctant SCRUM
+          master, meaning I own a lot of colored markers. I have a passion for
+          user centered design and love to collaborate on cool projects. My
+          primary experience encompesses NodeJS front and back end, Golang back
+          end and Cloud hosted Kubernetes.</span
         >
       </div>
       <div id="resume" class="section item resume sec2">
@@ -39,18 +41,6 @@
               justifyContent: 'center',
             }"
           >
-            <a-button
-              :style="{
-                width: '200px',
-                height: '50px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }"
-              type="primary"
-            >
-              Full Resume
-            </a-button>
             <a
               href="https://www.linkedin.com/in/michaelharrisonaus/"
               target="__none"
@@ -90,6 +80,7 @@
             :source="null"
             :tags="['NodeJS', 'GoLang', 'Kubernetes', 'Azure', 'Blockchain']"
             website="https://provendb.com"
+            description="ProvenDB uses Blockchain technology to create the world’s first genuinely trustworthy database. ProvenDB is for regulated industries or wherever impeccable data integrity is crucial. Solutions include DBAAS, Dockerized on premise deployment and devloper API integrations."
           />
         </div>
       </div>
@@ -105,6 +96,7 @@
             :source="null"
             :tags="['NodeJS', 'React', 'GraphQL', 'MongoDB']"
             website="https://www.provendb.com/solutions/compliance"
+            description="Compliance Vault provides a tamper-resistant digital store for your compliance data and documentation. We guarantee the origin, ownership, versioning, and security of your documents to satisfy the most rigorous compliance audit. Allows API integration for developers as well as a robust user interface for consumer document storage."
           />
         </div>
       </div>
@@ -120,6 +112,7 @@
             :tags="['NodeJS', 'React', 'Electron', 'MongoDB']"
             source="https://github.com/SouthbankSoftware/dbkoda"
             website="https://dbkoda.com"
+            description="dbKoda is the open-source, next generation IDE for MongoDB. Take your database to the next level with a Rich Code Editor, Connection Manager, Visual Aggregation builder and Performance Dashboard. Avaliable for download on Windows, Linux and MacOS, completely free, completely open source."
           />
         </div>
       </div>
@@ -135,6 +128,7 @@
             :source="null"
             :tags="['Dart', 'Flutter', 'Mobile', 'Firebase']"
             website="https://learn2play.landen.co/"
+            description="We love board games, but we hate reading through the manual. Learn2Play lets you start playing your favourite games straight out of the box. Quick and easy visual guides to get you playing straight away. Built using Flutter and avaliable on Android and iOS."
           />
         </div>
       </div>
@@ -187,7 +181,7 @@
             </div>
           </div>
           <div class="publication item">
-            <h4><i>Medium - July 2019</i></h4>
+            <h4><i>Blog Post - Medium - July 2019</i></h4>
             <h3>Building a NodeJS/Blockchain app in 15 minutes</h3>
             <h4>Step by step tutorial creating blockchain app.</h4>
             <span :style="{ textAlign: 'start' }" class="about"
@@ -205,7 +199,7 @@
             </div>
           </div>
           <div class="publication item">
-            <h4><i>Medium - April 2018</i></h4>
+            <h4><i>Blog Post - Medium - April 2018</i></h4>
             <h3>dbKoda Tips and Tricks</h3>
             <h4>Useful tips and tricks for the dbKoda application.</h4>
             <span :style="{ textAlign: 'start' }" class="about"
@@ -223,7 +217,7 @@
             </div>
           </div>
           <div class="publication item">
-            <h4><i>Medium - December 2017</i></h4>
+            <h4><i>Blog Post - Medium - December 2017</i></h4>
             <h3>Getting Started with MongoDB and dbKoda</h3>
             <h4>MongoDB is hard, dbKoda makes it easier.</h4>
             <span :style="{ textAlign: 'start' }" class="about"
@@ -288,25 +282,25 @@ export default Vue.extend({
         from: new Date(2018, 11),
         title: 'Lead Developer - Southbank Software',
         description:
-          'Lead recruitment, design and development from the ground up for ProvenDB, a Blockchain Enabled Database and the Compliance Vault, a web app allowing users to easily anchor their compliance documentation on public block chains. Responsabilities included full stack development, cloud architecture and leading the team using agile methodologies. ',
+          'Recruitment, Design and Development from the ground up for ProvenDB, a Blockchain Enabled Database and the Compliance Vault, consumer blockchain proofs for important documents.\nKey Responsibilities and Technologies:\n - Full stack development including cloud architecture.\n - Deep understanding of Blockchain and DLT.\n - Deployment of Kubernetes infrastructure on Google Cloud and Azure.\n - Docker and Kubernetes.\n - Blockchain and Cryptography\n - Golang',
       },
       {
         from: new Date(2016, 11),
         title: 'Senior Developer - Southbank Software',
         description:
-          'Senior developer and Scrum Master on dbKoda, a next generation, open source IDE for MongoDB. Responsabilities included running agile related activities, along side both front and back end development of an Electron App.',
+          'Senior Developer and Scrum Master on dbKoda, a next generation, open source IDE for MongoDB. \nKey Responsibilities and Technologies:\n - Full stack development for an Electron Application.\n - Deep understanding of MongoDB and Database practices.\n - CI and CD pipelines for application delivery.\n - MERN Stack (MongoDB/Express/React/NodeJS).\n - Marketing and exhibiting of application.\n - SCRUM master for project.',
       },
       {
         from: new Date(2016, 2),
         title: 'Team Lead - Telstra Automation',
         description:
-          'Lead a small team of 3 developers to create bespoke Automation and Dashboard solutions for internal and external stake holders. Key responsabilties included requirements gathering, solution design, coordinating with stakeholders and developing both front and back end.',
+          'Lead a small team of 3 developers to create bespoke Automation and Dashboard solutions for internal and external stake holders. \nKey Responsibilities and Technologies:\n - User Experience design and revamp for existing Web Applications. \n - Development of new platform architecture and database design.\n - ITIL ticketing and workflow automation.\n - LAMP Stack, MySQL and Postgres.\n - GoLang and Javascript',
       },
       {
         from: new Date(2015, 2),
         title: 'Developer - Telstra Big Data',
         description:
-          'Junior Developer at Telstra Big Data as part of the Telstra Graduate Program. Main responsability involved maintaining Splunk ingestion pipelines, NPS data cleansing pipelines and creation of a customer experience dashboard.',
+          'Junior Developer at Telstra Big Data as part of the Telstra Graduate Program.\nKey Responsibilities and Technologies:\n - Data Quality monitoring and process improvment.\n - Data Quality dashboarding, Data Sourcing and Data Ingestion.\n - Hadoop and Hive.\n - SpringXD Framework. \n - Splunk scripting, ingestion pipelines and dashboarding.',
       },
     ],
   }),
