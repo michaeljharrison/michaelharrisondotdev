@@ -35,11 +35,10 @@ export default {
 
   googleFonts: {
     download: true,
+    display: 'swap',
     families: {
       Roboto: true,
-      Montserrat: true,
-      Poppins: true,
-      Raleway: true,
+      Raleway: { wght: [100, 400] },
     },
   },
 
