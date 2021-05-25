@@ -11,6 +11,7 @@
         >
           <img
             class="screenshot"
+            :alt="`Screenshot 1 of ${project}.`"
             :src="require(`../assets/images/screenshots/${project}-1.jpeg`)"
           />
         </div>
@@ -23,6 +24,7 @@
         >
           <img
             class="screenshot"
+            :alt="`Screenshot 2 of ${project}.`"
             :src="require(`../assets/images/screenshots/${project}-2.jpeg`)"
           />
         </div>
@@ -35,6 +37,7 @@
         >
           <img
             class="screenshot"
+            :alt="`Screenshot 3 of ${project}.`"
             :src="require(`../assets/images/screenshots/${project}-3.jpeg`)"
           />
         </div>
@@ -44,6 +47,7 @@
     <div class="content">
       <img
         :class="project"
+        :alt="`${project} logo.`"
         :src="require(`../assets/images/${project}-logo.svg`)"
       />
       <div class="stack">

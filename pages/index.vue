@@ -11,7 +11,11 @@
           <h1 :style="{ 'margin-bottom': '0px' }">Michael Harrison.dev</h1>
           <h3 class="subtitle">Developer and Massive Geek.</h3>
         </div>
-        <img class="dp" :src="require(`../assets/images/mike-hero-dp.jpg`)" />
+        <img
+          class="dp"
+          :alt="`A stylized illustration of a handsome developer.`"
+          :src="require(`../assets/images/mike-hero-dp.jpg`)"
+        />
         <span class="introText"
           >I'm a full-stack software engineer, which really just means I can
           create bugs in a lot of different places. I'm also a reluctant SCRUM
