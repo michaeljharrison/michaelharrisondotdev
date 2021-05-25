@@ -141,11 +141,11 @@ h2 {
   font-size: 34px;
   font-weight: bold;
 }
-h3.subtitle {
+h2.subtitle {
   color: @light-gray;
-  font-size: 30px;
-  opacity: 0.5;
-  font-weight: bold;
+  // font-size: 30px;
+  // opacity: 0.5;
+  // font-weight: bold;
   text-align:center;
 }
 span {
@@ -172,7 +172,6 @@ span {
   background-color: @off-white;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  max-width: 420px;
   .item {
     padding-right: 6px;
   }
@@ -183,12 +182,17 @@ span {
 .section-year {
   color: @off-white;
   padding-left: 0px !important;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .wrapper-item {
   grid-template-columns: 65px 1fr !important;
   min-height: 264px;
-  width: auto;
-  margin-right: 10px;
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 }
 

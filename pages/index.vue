@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <VueScrollSnap>
+    <div class="scroll-snap-container">
       <div
         id="home"
         ref="homeRef"
@@ -9,7 +9,7 @@
       >
         <div>
           <h1 :style="{ 'margin-bottom': '0px' }">Michael Harrison.dev</h1>
-          <h3 class="subtitle">Developer and Massive Geek.</h3>
+          <h2 class="subtitle">Developer and Massive Geek.</h2>
         </div>
         <img
           class="dp"
@@ -269,16 +269,15 @@
           </div>
         </div>
       </div>
-    </VueScrollSnap>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Timeline from 'timeline-vuejs'
-import VueScrollSnap from 'vue-scroll-snap'
 export default Vue.extend({
-  components: { Timeline, VueScrollSnap },
+  components: { Timeline },
   data: () => ({
     messageWhenNoItems: 'There are not items',
     timelineItems: [
