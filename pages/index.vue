@@ -64,12 +64,15 @@
               </a-button>
             </a>
           </div>
-          <Timeline
-            :timeline-items="timelineItems"
-            :message-when-no-items="messageWhenNoItems"
-            :show-day-and-month="true"
-            order="desc"
-          />
+          <ResumeItem
+            v-for="item in timelineItems"
+            :key="item.title"
+            :description="item.description"
+            :title="item.title"
+            :subtitle="item.subtitle"
+            :dates="item.dates"
+            :items="item.points"
+          ></ResumeItem>
         </div>
       </div>
       <div id="projects" class="section item sec3">
@@ -151,7 +154,19 @@
             <h4><i>Book - Apress - April 2021</i></h4>
             <h3>MongoDB Performance Tuning</h3>
             <h4>Optimizing MongoDB Databases and their Applications</h4>
-            <span :style="{ textAlign: 'start' }" class="about"
+            <img
+              class="pubImage"
+              :style="{
+                width: '200px',
+                alignSelf: 'center',
+                marginBottom: '14px',
+              }"
+              :src="require(`../assets/images/mdb_perf_tuning.jpg`)"
+              alt="MongoDB Performance Tuning Cover."
+            />
+            <span
+              :style="{ textAlign: 'start', alignSelf: 'center' }"
+              class="about"
               >Fast and complete guide to optimize the performance of MongoDB
               databases and the applications that depend on them.</span
             >
@@ -170,7 +185,19 @@
             <h4>
               A hands on guide to using MongoDB and Atlas in the real world.
             </h4>
-            <span :style="{ textAlign: 'start' }" class="about"
+            <img
+              class="pubImage"
+              :style="{
+                width: '200px',
+                alignSelf: 'center',
+                marginBottom: '14px',
+              }"
+              :src="require(`../assets/images/mdb_fundamentals.jpeg`)"
+              alt="MongoDB Fundamentals Cover."
+            />
+            <span
+              :style="{ textAlign: 'start', alignSelf: 'center' }"
+              class="about"
               >A practical, excercise based guide to learning the essential
               MongoDB skills required in the workplace with a hands-on
               focus.</span
@@ -188,7 +215,9 @@
             <h4><i>Blog Post - Medium - July 2019</i></h4>
             <h3>Building a NodeJS/Blockchain app in 15 minutes</h3>
             <h4>Step by step tutorial creating blockchain app.</h4>
-            <span :style="{ textAlign: 'start' }" class="about"
+            <span
+              :style="{ textAlign: 'start', alignSelf: 'center' }"
+              class="about"
               >Using ProvenDB and create-react-app this tutorial shows you how
               to spin up a web based blockchain-integrated app in under 15
               minutes, for free.</span
@@ -206,7 +235,9 @@
             <h4><i>Blog Post - Medium - April 2018</i></h4>
             <h3>dbKoda Tips and Tricks</h3>
             <h4>Useful tips and tricks for the dbKoda application.</h4>
-            <span :style="{ textAlign: 'start' }" class="about"
+            <span
+              :style="{ textAlign: 'start', alignSelf: 'center' }"
+              class="about"
               >dbKoda contains a huge trove of features to help you work with
               your MongoDB deployments, here are some you might not know
               about.</span
@@ -224,7 +255,9 @@
             <h4><i>Blog Post - Medium - December 2017</i></h4>
             <h3>Getting Started with MongoDB and dbKoda</h3>
             <h4>MongoDB is hard, dbKoda makes it easier.</h4>
-            <span :style="{ textAlign: 'start' }" class="about"
+            <span
+              :style="{ textAlign: 'start', alignSelf: 'center' }"
+              class="about"
               >MongoDB can be very difficult to get started with, but by using a
               free GUI like dbKoda, you can get the most out of MongoDB quickly
               and easily.</span
@@ -239,9 +272,11 @@
             </div>
           </div>
         </div>
-        <a :style="{ marginTop: '10px' }" href="#home">
-          <a-button type="primary" shape="circle" icon="arrow-up" />
-        </a>
+        <a-tooltip :title="`Return to top`">
+          <a :style="{ marginTop: '10px' }" href="#home">
+            <a-button type="primary" shape="circle" icon="arrow-up" />
+          </a>
+        </a-tooltip>
 
         <div :style="{ textAlign: 'center', marginTop: '30px' }">
           <div>
@@ -260,6 +295,9 @@
             >
               <a-button type="primary" shape="circle" icon="linkedin" />
             </a>
+            <a href="mailto:michael.j.harrison@outlook.com/">
+              <a-button type="primary" shape="circle" icon="mail" />
+            </a>
           </div>
 
           <div
@@ -275,38 +313,92 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Timeline from 'timeline-vuejs'
+import ResumeItem from '~/components/ResumeItem.vue'
 export default Vue.extend({
-  components: { Timeline },
+  components: { ResumeItem },
   data: () => ({
     messageWhenNoItems: 'There are not items',
     timelineItems: [
       {
-        from: new Date(2018, 11),
-        title: 'Lead Developer - Southbank Software',
+        dates: '11.2018 - Present',
+        title: 'Lead Developer',
+        subtitle: 'Southbank  Software',
         description:
-          'Recruitment, Design and Development from the ground up for ProvenDB, a Blockchain Enabled Database and the Compliance Vault, consumer blockchain proofs for important documents.\nKey Responsibilities and Technologies:\n - Full stack development including cloud architecture.\n - Deep understanding of Blockchain and DLT.\n - Deployment of Kubernetes infrastructure on Google Cloud and Azure.\n - Docker and Kubernetes.\n - Blockchain and Cryptography\n - Golang',
+          'Recruitment, Design and Development from the ground up for ProvenDB, a Blockchain Enabled Database and the Compliance Vault, consumer blockchain proofs for important documents.',
+        points: [
+          'Full Stack Web & Golang Development',
+          'Cloud Architecture and Upkeep',
+          'Blockchain & DLT design/development',
+          'Docker & Kubernetes Design and Deployment',
+        ],
       },
       {
-        from: new Date(2016, 11),
-        title: 'Senior Developer - Southbank Software',
+        dates: '11.2016 - 11.2018',
+        title: 'Senior Developer',
+        subtitle: 'Southbank Software',
         description:
-          'Senior Developer and Scrum Master on dbKoda, a next generation, open source IDE for MongoDB. \nKey Responsibilities and Technologies:\n - Full stack development for an Electron Application.\n - Deep understanding of MongoDB and Database practices.\n - CI and CD pipelines for application delivery.\n - MERN Stack (MongoDB/Express/React/NodeJS).\n - Marketing and exhibiting of application.\n - SCRUM master for project.',
+          'Senior Developer and Scrum Master on dbKoda, a next generation, open source IDE for MongoDB.',
+        points: [
+          'Full Stack Electron',
+          'MongoDB and Database Best Practices',
+          'CI/CD Pipelines.',
+          'MERN Stack Applications',
+          'Product Marketing and Exhibiting',
+          'SCRUM Master',
+        ],
       },
       {
-        from: new Date(2016, 2),
-        title: 'Team Lead - Telstra Automation',
+        dates: '02.2016 - 11.2016',
+        title: 'Team Lead',
+        subtitle: 'Telstra Automation',
         description:
-          'Lead a small team of 3 developers to create bespoke Automation and Dashboard solutions for internal and external stake holders. \nKey Responsibilities and Technologies:\n - User Experience design and revamp for existing Web Applications. \n - Development of new platform architecture and database design.\n - ITIL ticketing and workflow automation.\n - LAMP Stack, MySQL and Postgres.\n - GoLang and Javascript',
+          'Lead a small team of 3 developers to create bespoke Automation and Dashboard solutions for internal and external stake holders.',
+        points: [
+          'User Experience Design & Review',
+          'Web App and Automation Script upgrades.',
+          'Platform Architecture and Database Design.',
+          'ITIL Ticketing and Workflow Automation.',
+          'LAMP Stack Development.',
+          'Golang and Javascript Development',
+        ],
       },
       {
-        from: new Date(2015, 2),
-        title: 'Developer - Telstra Big Data',
+        dates: '02.2015 - 02.2016',
+        title: 'Developer',
+        subtitle: 'Telstra Big Data',
         description:
-          'Junior Developer at Telstra Big Data as part of the Telstra Graduate Program.\nKey Responsibilities and Technologies:\n - Data Quality monitoring and process improvment.\n - Data Quality dashboarding, Data Sourcing and Data Ingestion.\n - Hadoop and Hive.\n - SpringXD Framework. \n - Splunk scripting, ingestion pipelines and dashboarding.',
+          'Junior Developer at Telstra Big Data as part of the Telstra Graduate Program.',
+        points: [
+          'Data Quality Monitoring and Dashboarding.',
+          'Data Sourcing and Ingestion Pipelines',
+          'Hadoop and Hive.',
+          'SpringXD Framework Development.',
+          'Splunk Scripting and Dashboarding',
+        ],
       },
     ],
   }),
+  created() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      // Any code to be executed when the window is scrolled
+      if (window.scrollY > 0 && window.scrollY < 750) {
+        this.$store.commit('SET_currentPage', ['home'])
+      } else if (window.scrollY > 750 && window.scrollY < 2400) {
+        this.$store.commit('SET_currentPage', ['resume'])
+      } else if (window.scrollY > 2400 && window.scrollY < 5600) {
+        this.$store.commit('SET_currentPage', ['projects'])
+      } else if (window.scrollY > 5600) {
+        this.$store.commit('SET_currentPage', ['publications'])
+      }
+    },
+  },
 })
 </script>
 

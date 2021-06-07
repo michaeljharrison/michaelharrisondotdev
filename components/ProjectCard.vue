@@ -1,6 +1,6 @@
 <template>
   <div class="projectCard">
-    <a-modal v-model="visible" :title="title" @ok="handleOk">
+    <a-modal v-model="visible" :title="title" :footer="null" @ok="handleOk">
       <a-carousel>
         <div
           :style="{

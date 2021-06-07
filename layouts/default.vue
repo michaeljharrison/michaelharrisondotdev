@@ -3,7 +3,7 @@
     <a-layout id="components-layout-demo-fixed" class="layout">
       <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
         <a-menu
-          v-model="current"
+          v-model="currentPage"
           class="menu"
           theme="dark"
           mode="horizontal"
@@ -32,11 +32,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapState } from 'vuex'
 export default Vue.extend({
+  computed: mapState(['currentPage']),
   data() {
-    return {
-      current: ['home'],
-    }
+    return {}
   },
 })
 </script>

@@ -60,27 +60,9 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    'nuxt-i18n',
+    '@nuxtjs/robots',
   ],
-
-  i18n: {
-    locales: ['en', 'fr', 'es'],
-    defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: {
-          welcome: 'Welcome',
-        },
-        fr: {
-          welcome: 'Bienvenue',
-        },
-        es: {
-          welcome: 'Bienvenido',
-        },
-      },
-    },
-  },
+  robots: {},
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

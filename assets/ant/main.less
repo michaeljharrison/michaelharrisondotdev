@@ -202,8 +202,8 @@ span {
   min-height: 264px;
   width: 100%;
   max-width: 1280px;
-  padding-left: 4%;
-  padding-right: 4%;
+  // padding-left: 4%;
+  // padding-right: 4%;
 }
 }
 
@@ -255,6 +255,9 @@ margin-bottom: 12px;
     border-bottom-left-radius: 0px;
     box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.75);
     padding:20px;
+    .pubImage {
+      box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.75);
+    }
     span {
       color: black;
       max-width: 850px;
@@ -287,14 +290,25 @@ margin-bottom: 12px;
   }
 }
 
-.projectCard {
+.projectCard, .resumeItem {
   .content {
     text-align: start;
     padding-left: 10px;
     padding-right: 30px;
+    h1,h2 {
+      color: @dark-gray;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 24px;
+    }
     h3 {
       width: 100%;
+      font-size: 20px;
       text-align: start;
+      opacity: 0.8;
     }
     span {
       color: @dark-gray;
