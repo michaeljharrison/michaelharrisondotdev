@@ -5,6 +5,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  static: {
+    prefix: false,
+  },
+
   render: {
     static: {
       maxAge: 60 * 60 * 24 * 365 * 1000,
