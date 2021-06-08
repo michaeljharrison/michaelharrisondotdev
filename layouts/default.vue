@@ -12,7 +12,12 @@
           <a-menu-item key="home" class="logo">
             <a href="#home">MH.dev</a>
           </a-menu-item>
-          <a-menu-item key="resume"> <a href="#resume">Resume</a> </a-menu-item>
+          <a-menu-item key="resume">
+            <a href="#resume">Experience</a>
+          </a-menu-item>
+          <a-menu-item key="textResume">
+            <a href="resume.pdf" target="__none">Resume</a>
+          </a-menu-item>
           <a-menu-item key="projects">
             <a href="#projects">Projects</a>
           </a-menu-item>

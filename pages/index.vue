@@ -63,6 +63,21 @@
                 LinkedIn
               </a-button>
             </a>
+            <a href="resume.pdf" target="__none">
+              <a-button
+                :style="{
+                  width: '200px',
+                  height: '50px',
+                  marginLeft: '20px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }"
+                type="primary"
+              >
+                Resume
+              </a-button>
+            </a>
           </div>
           <ResumeItem
             v-for="item in timelineItems"
@@ -364,7 +379,7 @@ export default Vue.extend({
       },
       {
         dates: '02.2015 - 02.2016',
-        title: 'Developer',
+        title: 'Junior Developer',
         subtitle: 'Telstra Big Data',
         description:
           'Junior Developer at Telstra Big Data as part of the Telstra Graduate Program.',

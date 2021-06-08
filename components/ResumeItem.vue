@@ -9,7 +9,6 @@
       <h3 :style="{ textAlign: 'start', marginBottom: '0px' }">
         {{ subtitle }}
       </h3>
-
       <span class="about" :style="{ textAlign: 'start', minWidth: '100%' }">{{
         description
       }}</span>
@@ -22,7 +21,11 @@
           flexWrap: 'wrap',
         }"
       >
-        <span v-for="point in items" :key="point" :style="{ flexGrow: 1 }">
+        <span
+          v-for="point in items"
+          :key="point"
+          :style="{ flexGrow: 1, textAlign: 'start' }"
+        >
           — {{ point }}</span
         >
       </div>
@@ -51,7 +54,7 @@ export default Vue.extend({
   min-width: 100%;
   background: white;
   min-height: 20vh;
-  max-height: 50vh;
+  // max-height: 50vh;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
