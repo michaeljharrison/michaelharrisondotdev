@@ -63,7 +63,10 @@
                 LinkedIn
               </a-button>
             </a>
-            <a href="resume.pdf" target="__none">
+            <a
+              href="https://github.com/michaeljharrison/michaelharrisondotdev/raw/master/public/Resume.pdf"
+              target="__none"
+            >
               <a-button
                 :style="{
                   width: '200px',

@@ -16,7 +16,11 @@
             <a href="#resume">Experience</a>
           </a-menu-item>
           <a-menu-item key="textResume">
-            <a href="resume.pdf" target="__none">Resume</a>
+            <a
+              href="https://github.com/michaeljharrison/michaelharrisondotdev/raw/master/public/Resume.pdf"
+              target="__none"
+              >Resume</a
+            >
           </a-menu-item>
           <a-menu-item key="projects">
             <a href="#projects">Projects</a>
