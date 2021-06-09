@@ -17,7 +17,7 @@
           </a-menu-item>
           <a-menu-item key="textResume">
             <a
-              href="https://github.com/michaeljharrison/michaelharrisondotdev/raw/master/public/Resume.pdf"
+              href="https://github.com/michaeljharrison/michaelharrisondotdev/raw/master/static/Resume.pdf"
               target="__none"
               >Resume</a
             >
