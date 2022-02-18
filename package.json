@@ -28,7 +28,7 @@
     "fibers": "^5.0.0",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.27.0",
-    "sass": "^1.32.12",
+    "sass": "^1.49.8",
     "sass-loader": "10",
     "timeline-vuejs": "^1.1.7"
   },
