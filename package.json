@@ -49,7 +49,7 @@
     "husky": "^4.3.8",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
-    "lint-staged": "^10.5.4",
+    "lint-staged": "^12.5.0",
     "nightwatch": "^1.5.1",
     "prettier": "^2.2.1",
     "vue-scroll-snap": "^0.1.11"
