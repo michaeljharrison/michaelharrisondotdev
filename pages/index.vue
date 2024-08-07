@@ -9,7 +9,9 @@
       >
         <div>
           <h1 :style="{ 'margin-bottom': '0px' }">Michael Harrison.dev</h1>
-          <h2 class="subtitle">Developer and Massive Geek.</h2>
+          <h2 :style="{ 'text-align': 'center' }" class="subtitle">
+            Developer and Massive Geek.
+          </h2>
         </div>
         <img
           class="dp"
@@ -290,19 +292,51 @@
             </div>
           </div>
         </div>
+      </div>
+      <div id="patents" class="section item patents sec8">
+        <div class="container">
+          <h2
+            :style="{
+              paddingTop: '64px',
+              textAlign: 'center',
+              marginBottom: '20px',
+            }"
+          >
+            Patents
+          </h2>
+          <div class="patent item">
+            <h4><i>Issued Jun 27, 2023</i></h4>
+            <h3>Blockchain-enhanced proof of identity</h3>
+            <h4>Patent #US11689374B1</h4>
+            <span
+              :style="{ textAlign: 'start', alignSelf: 'center' }"
+              class="about"
+              >A method and set of technologies for creating a blockchain-backed
+              proof of identity, leveraging multiple existing proof of identity
+              methods along with advanced cryptography to create a tamper-proof
+              record which can then be immutable stored on a public blockchain
+              for verification.</span
+            >
+            <div class="footer">
+              <a-button
+                type="primary"
+                href="https://patents.google.com/patent/US11689374B1/en"
+                target="__none"
+                >View Patent</a-button
+              >
+            </div>
+          </div>
+        </div>
         <a-tooltip :title="`Return to top`">
-          <a :style="{ marginTop: '10px' }" href="#home">
+          <a :style="{ marginTop: '5px' }" href="#home">
             <a-button type="primary" shape="circle" icon="arrow-up" />
           </a>
         </a-tooltip>
 
-        <div :style="{ textAlign: 'center', marginTop: '30px' }">
+        <div :style="{ textAlign: 'center', marginTop: '15px' }">
           <div>
             <a href="https://github.com/michaeljharrison" target="__none">
               <a-button type="primary" shape="circle" icon="github" />
-            </a>
-            <a href="https://twitter.com/Code_With_MikeH" target="__none">
-              <a-button type="primary" shape="circle" icon="twitter" />
             </a>
             <a href="https://medium.com/@mike_831" target="__none">
               <a-button type="primary" shape="circle" icon="medium" />
@@ -321,7 +355,7 @@
           <div
             :style="{ textAlign: 'center', marginTop: '14px', color: 'white' }"
           >
-            © 2021 Michael Harrison
+            © 2024 Michael Harrison
           </div>
         </div>
       </div>
@@ -338,7 +372,20 @@ export default Vue.extend({
     messageWhenNoItems: 'There are not items',
     timelineItems: [
       {
-        dates: '11.2018 - Present',
+        dates: '03.2023 - Present',
+        title: 'Senior Software Engineer',
+        subtitle: 'OneSpan',
+        description:
+          'Design, Development and Deployment of the OneSpan Trust Vault to enable Blockchain backed digital agreements storage.',
+        points: [
+          'Architecting and Designing a new Blockchain Platform for existing products',
+          'NodeJS & Golang development',
+          'Docker, Kubernetes and Terraform Deployments',
+          'Large scale refactor of back end to enable scalability and performance',
+        ],
+      },
+      {
+        dates: '11.2018 - 03.2023',
         title: 'Lead Developer',
         subtitle: 'Southbank  Software',
         description:
@@ -412,8 +459,10 @@ export default Vue.extend({
         this.$store.commit('SET_currentPage', ['resume'])
       } else if (window.scrollY > 2400 && window.scrollY < 5600) {
         this.$store.commit('SET_currentPage', ['projects'])
-      } else if (window.scrollY > 5600) {
+      } else if (window.scrollY > 5600 && window.scrollY < 7500) {
         this.$store.commit('SET_currentPage', ['publications'])
+      } else if (window.scrollY > 7500) {
+        this.$store.commit('SET_currentPage', ['patents'])
       }
     },
   },
@@ -437,8 +486,16 @@ export default Vue.extend({
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family:
+    'Quicksand',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -462,6 +519,7 @@ export default Vue.extend({
   /* Set the minimum height of the items to be the same as the height of the scroll-snap-container.*/
   min-height: 90vh;
 }
+
 .scroll-snap-container {
   height: 96vh;
   width: 100vw;
@@ -470,6 +528,7 @@ export default Vue.extend({
 .timeline {
   max-width: 100% !important;
 }
+
 .wrapper-timeline {
   display: flex;
   flex-direction: column;

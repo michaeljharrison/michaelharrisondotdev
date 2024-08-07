@@ -2,13 +2,7 @@
   <div>
     <a-layout id="components-layout-demo-fixed" class="layout">
       <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
-        <a-menu
-          v-model="currentPage"
-          class="menu"
-          theme="dark"
-          mode="horizontal"
-          :style="{ lineHeight: '64px' }"
-        >
+        <a-menu v-model="currentPage" class="menu" theme="dark" mode="horizontal" :style="{ lineHeight: '64px' }">
           <a-menu-item key="home" class="logo">
             <a href="#home">MH.dev</a>
           </a-menu-item>
@@ -16,17 +10,17 @@
             <a href="#resume">Experience</a>
           </a-menu-item>
           <a-menu-item key="textResume">
-            <a
-              href="https://github.com/michaeljharrison/michaelharrisondotdev/raw/master/static/Resume.pdf"
-              target="__none"
-              >Resume</a
-            >
+            <a href="https://github.com/michaeljharrison/michaelharrisondotdev/raw/master/static/Resume.pdf"
+              target="__none">Resume</a>
           </a-menu-item>
           <a-menu-item key="projects">
             <a href="#projects">Projects</a>
           </a-menu-item>
           <a-menu-item key="publications">
             <a href="#publications">Publications</a>
+          </a-menu-item>
+          <a-menu-item key="patents">
+            <a href="#patents">Patents</a>
           </a-menu-item>
         </a-menu>
       </a-layout-header>
