@@ -3,7 +3,6 @@
     "site": "michaelharrison",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "source": "**",
     "destination": "/404.html"
   }
 }
